@@ -1,5 +1,5 @@
-# Credits: ChatGPT
 #!/bin/bash
+# Assisted by ChatGPT
 
 # Define the owner and repository
 OWNER="gogo100people"
@@ -72,4 +72,10 @@ $ZSHHELPER_CONTENT
 else
     echo "Already up-to-date with version $LATEST_VERSION."
 fi
-# Credits: ChatGPT
+
+# Clean up temporary files
+if [ -f "$TEMP_FILE" ]; then
+    rm "$TEMP_FILE"
+fi
+
+echo "Updater finished."
